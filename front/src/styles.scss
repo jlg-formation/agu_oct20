@@ -2,12 +2,30 @@
 
 @import "../node_modules/normalize.css/normalize.css";
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   font-family: sans-serif;
 }
 
-
 a {
   color: inherit;
   text-decoration: inherit;
+}
+
+h1 {
+  text-align: center;
+}
+
+main {
+  padding: 0.5em;
+  width: 100%;
+  max-width: 50em;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
 }
