@@ -31,6 +31,7 @@ main {
 }
 
 button {
+  padding: 0.5em 1em;
   border: 0.1em solid #eee;
   background: #eee;
   &:not(:disabled) {
@@ -58,4 +59,16 @@ button {
       }
     }
   }
+}
+
+input {
+  padding: 0.5em 1em;
+  border: 0.1em solid #ddd;
+  width: 100%;
+}
+
+form {
+  width: 19em;
+  display: flex;
+  flex-flow: column;
 }
