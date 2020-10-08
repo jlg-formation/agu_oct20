@@ -8,6 +8,9 @@ import { HomeComponent } from './routes/home/home.component';
 import { LegalComponent } from './routes/legal/legal.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { WidgetModule } from './widget/widget.module';
+import { QuizzService } from './quizz.service';
+import { HttpQuizzService } from './http-quizz.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent, HomeComponent, LegalComponent],
@@ -17,8 +20,9 @@ import { WidgetModule } from './widget/widget.module';
     LayoutModule,
     FontAwesomeModule,
     WidgetModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [{ provide: QuizzService, useClass: HttpQuizzService }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
