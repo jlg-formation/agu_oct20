@@ -7,20 +7,18 @@ import { LayoutModule } from './layout/layout.module';
 import { HomeComponent } from './routes/home/home.component';
 import { LegalComponent } from './routes/legal/legal.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { WidgetModule } from './widget/widget.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent,
-    LegalComponent
-  ],
+  declarations: [AppComponent, HomeComponent, LegalComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     LayoutModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    WidgetModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

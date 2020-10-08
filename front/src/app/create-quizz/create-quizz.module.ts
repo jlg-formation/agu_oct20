@@ -7,6 +7,7 @@ import { CreateQuizzComponent } from './create-quizz.component';
 import { FinishedComponent } from './finished/finished.component';
 import { SetupComponent } from './setup/setup.component';
 import { AddQuestionComponent } from './add-question/add-question.component';
+import { WidgetModule } from '../widget/widget.module';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,11 @@ import { AddQuestionComponent } from './add-question/add-question.component';
     SetupComponent,
     AddQuestionComponent,
   ],
-  imports: [CommonModule, CreateQuizzRoutingModule, FontAwesomeModule],
+  imports: [
+    CommonModule,
+    CreateQuizzRoutingModule,
+    FontAwesomeModule,
+    WidgetModule,
+  ],
 })
 export class CreateQuizzModule {}
