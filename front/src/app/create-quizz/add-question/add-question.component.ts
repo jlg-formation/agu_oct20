@@ -21,7 +21,7 @@ export class AddQuestionComponent implements OnInit {
       new FormControl('Moscou', Validators.required),
       new FormControl('Madrid', Validators.required),
     ]),
-    correctAnswer: new FormControl('', [
+    correctAnswer: new FormControl('B', [
       Validators.required,
       Validators.pattern(/^[A-D]$/),
     ]),

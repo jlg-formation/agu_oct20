@@ -1,6 +1,8 @@
 <main>
   <h1>Quizz: {{ quizz.current.name }}</h1>
-  <p>Nombre de question: 0</p>
-  <button appAutofocus class="primary" routerLink="../add-question">Ajouter une question</button>
+  <p>Nombre de questions : {{ quizz.current.questions.length }}</p>
+  <button appAutofocus class="primary" routerLink="../add-question">
+    Ajouter une question
+  </button>
   <button routerLink="../finished">Terminer</button>
 </main>
