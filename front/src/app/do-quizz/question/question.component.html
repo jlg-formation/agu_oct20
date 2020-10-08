@@ -4,9 +4,9 @@
   <form>
     <label *ngFor="let letter of ['A', 'B', 'C', 'D']" class="answer">
       <input type="radio" name="" id="" />
-      <span>{{ letter }}</span>
+      <span class="letter">{{ letter }}</span>
       <span>Paris</span>
     </label>
-    <button type="button" routerLink="../score">Suivant</button>
+    <button class="primary" type="button" routerLink="../score">Suivant</button>
   </form>
 </main>
