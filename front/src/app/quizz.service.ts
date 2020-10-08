@@ -5,10 +5,23 @@ import { Quizz } from './interfaces/quizz';
   providedIn: 'root',
 })
 export class QuizzService {
-  current: Partial<Quizz>;
+  current = this.getCurrent();
   constructor() {}
+
+  getCurrent(): Partial<Quizz> {
+    const str = localStorage.getItem('current');
+    if (!str) {
+      return undefined;
+    }
+    return JSON.parse(str) as Partial<Quizz>;
+  }
 
   create(q: Partial<Quizz>): void {
     this.current = q;
+    this.saveCurrent();
+  }
+
+  saveCurrent(): void {
+    localStorage.setItem('current', JSON.stringify(this.current));
   }
 }
