@@ -1,1 +1,8 @@
-<p>do-quizz works!</p>
+<main>
+  <h1>Liste des quizz</h1>
+  <div>
+    <button routerLink="question" *ngFor="let q of list">
+      {{ q.name }}
+    </button>
+  </div>
+</main>
