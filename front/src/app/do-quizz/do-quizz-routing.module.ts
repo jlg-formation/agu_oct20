@@ -7,7 +7,7 @@ import { ScoreComponent } from './score/score.component';
 
 const routes: Routes = [
   { path: '', component: DoQuizzComponent },
-  { path: 'question', component: QuestionComponent },
+  { path: 'question/:nbr', component: QuestionComponent },
   { path: 'score', component: ScoreComponent },
 ];
 
