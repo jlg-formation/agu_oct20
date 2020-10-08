@@ -50,4 +50,8 @@ export class QuizzService {
     this.map[this.current.name] = this.current as Quizz;
     this.saveMap();
   }
+
+  isMapEmpty(): boolean {
+    return Object.keys(this.map).length === 0;
+  }
 }

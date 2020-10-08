@@ -1,4 +1,4 @@
 <main>
   <button appAutofocus routerLink="/create">Crée ton Quizz&nbsp;!</button>
-  <button routerLink="/list">Fais un Quizz&nbsp;!</button>
+  <button [disabled]="quizz.isMapEmpty()" routerLink="/list">Fais un Quizz&nbsp;!</button>
 </main>
