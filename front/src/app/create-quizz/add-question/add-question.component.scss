@@ -1,0 +1,31 @@
+label {
+  margin-bottom: 1em;
+}
+
+.answers {
+  display: flex;
+}
+
+.text-inputs {
+  display: flex;
+  align-items: center;
+  height: 3em;
+
+  span {
+    width: 1.5em;
+  }
+}
+
+.radio {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 3em;
+  width: 2em;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1em;
+}

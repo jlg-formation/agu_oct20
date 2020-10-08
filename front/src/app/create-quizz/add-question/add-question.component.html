@@ -7,9 +7,11 @@
     </label>
     <div>Réponses possibles</div>
     <div class="answers">
-      <div *ngFor="let letter of ['A', 'B', 'C', 'D']" class="text-inputs">
-        <span>{{ letter }}</span>
-        <input type="text" />
+      <div class="first-col">
+        <div *ngFor="let letter of ['A', 'B', 'C', 'D']" class="text-inputs">
+          <span>{{ letter }}</span>
+          <input type="text" />
+        </div>
       </div>
       <div class="correct-answer">
         <div *ngFor="let letter of ['A', 'B', 'C', 'D']" class="radio">
@@ -19,7 +21,9 @@
     </div>
     <div class="buttons">
       <button type="button" routerLink="../setup">Annuler</button>
-      <button type="button" routerLink="../setup">Ajouter</button>
+      <button type="button" routerLink="../setup" class="primary">
+        Ajouter
+      </button>
     </div>
   </form>
 </main>
