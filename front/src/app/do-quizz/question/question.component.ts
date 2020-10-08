@@ -32,6 +32,21 @@ export class QuestionComponent implements OnInit {
   ngOnInit(): void {}
 
   submit(): void {
-    console.log('submit');
+    const givenAnswer = this.f.value.correctAnswer;
+    const correctAnswer = this.quizz.current.questions[this.nbr - 1]
+      .correctAnswer;
+
+    if (givenAnswer === correctAnswer) {
+      this.quizz.progress.score++;
+    }
+    this.quizz.progress.currentQuestion++;
+    this.quizz.saveProgress();
+    if (this.nbr === this.quizz.current.questions.length) {
+      this.router.navigate(['../../score'], { relativeTo: this.route });
+      return;
+    }
+
+    this.router.navigate(['../' + (this.nbr + 1)], { relativeTo: this.route });
+    this.f.reset();
   }
 }
