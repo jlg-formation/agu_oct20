@@ -1,10 +1,12 @@
 import { Injectable } from '@angular/core';
+import { Question } from './interfaces/question';
 import { Quizz } from './interfaces/quizz';
 
 @Injectable({
   providedIn: 'root',
 })
 export class QuizzService {
+  
   current = this.getCurrent();
   constructor() {}
 
@@ -18,10 +20,16 @@ export class QuizzService {
 
   create(q: Partial<Quizz>): void {
     this.current = q;
+    this.current.questions = [];
     this.saveCurrent();
   }
 
   saveCurrent(): void {
     localStorage.setItem('current', JSON.stringify(this.current));
+  }
+
+  addQuestion(question: Question): void {
+    this.current.questions.push(question);
+    this.saveCurrent();
   }
 }

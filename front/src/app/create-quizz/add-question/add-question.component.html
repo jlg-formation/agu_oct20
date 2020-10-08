@@ -1,29 +1,35 @@
 <main>
   <h1>Ajouter une question</h1>
-  <form>
+  <form [formGroup]="f" (ngSubmit)="submit()">
     <label>
       <div>Libellé</div>
-      <textarea appAutofocus rows="3"></textarea>
+      <textarea appAutofocus rows="3" formControlName="text"></textarea>
     </label>
     <div>Réponses possibles</div>
     <div class="answers">
       <div class="first-col">
-        <div *ngFor="let letter of ['A', 'B', 'C', 'D']" class="text-inputs">
+        <div
+          formArrayName="answers"
+          *ngFor="let letter of ['A', 'B', 'C', 'D']; index as i"
+          class="text-inputs"
+        >
           <span>{{ letter }}</span>
-          <input type="text" />
+          <input type="text" [formControlName]="i" />
         </div>
       </div>
       <div class="correct-answer">
         <div *ngFor="let letter of ['A', 'B', 'C', 'D']" class="radio">
-          <input type="radio" value="A" />
+          <input
+            type="radio"
+            formControlName="correctAnswer"
+            [value]="letter"
+          />
         </div>
       </div>
     </div>
     <div class="buttons">
       <button type="button" routerLink="../setup">Annuler</button>
-      <button type="button" routerLink="../setup" class="primary">
-        Ajouter
-      </button>
+      <button [disabled]="f.invalid" class="primary">Ajouter</button>
     </div>
   </form>
 </main>
