@@ -7,6 +7,7 @@ import { QuestionComponent } from './question/question.component';
 import { ScoreComponent } from './score/score.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { WidgetModule } from '../widget/widget.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [DoQuizzComponent, QuestionComponent, ScoreComponent],
@@ -15,6 +16,7 @@ import { WidgetModule } from '../widget/widget.module';
     DoQuizzRoutingModule,
     WidgetModule,
     FontAwesomeModule,
+    ReactiveFormsModule,
   ],
 })
 export class DoQuizzModule {}

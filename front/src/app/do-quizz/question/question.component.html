@@ -1,12 +1,16 @@
 <main>
-  <h1>Quizz : {{ "Les capitales d europe" }}</h1>
-  <p>Quelle est la capitale de la France ?</p>
-  <form>
-    <label *ngFor="let letter of ['A', 'B', 'C', 'D']" class="answer">
-      <input type="radio" name="" id="" />
+  <h1>Quizz : {{ quizz.current.name }}</h1>
+  <h2>Question {{ nbr }}</h2>
+  <p>{{ quizz.current.questions[nbr - 1].text }}</p>
+  <form [formGroup]="f" (ngSubmit)="submit()">
+    <label
+      *ngFor="let letter of ['A', 'B', 'C', 'D']; index as i"
+      class="answer"
+    >
+      <input type="radio" formControlName="correctAnswer" [value]="letter" />
       <span class="letter">{{ letter }}</span>
-      <span>Paris</span>
+      <span>{{ quizz.current.questions[nbr - 1].answers[i] }}</span>
     </label>
-    <button class="primary" type="button" routerLink="../score">Suivant</button>
+    <button class="primary" [disabled]="f.invalid">Suivant</button>
   </form>
 </main>
