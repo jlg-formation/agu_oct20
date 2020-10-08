@@ -54,4 +54,8 @@ export class QuizzService {
   isMapEmpty(): boolean {
     return Object.keys(this.map).length === 0;
   }
+
+  getList(): Quizz[] {
+    return Object.values(this.map);
+  }
 }

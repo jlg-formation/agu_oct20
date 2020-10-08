@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { QuizzService } from '../quizz.service';
 
 @Component({
   selector: 'app-do-quizz',
@@ -6,9 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./do-quizz.component.scss'],
 })
 export class DoQuizzComponent implements OnInit {
-  list = [{ name: 'titi' }, { name: 'toto' }, { name: 'tata' }];
-
-  constructor() {}
+  constructor(public quizz: QuizzService) {}
 
   ngOnInit(): void {}
 }
