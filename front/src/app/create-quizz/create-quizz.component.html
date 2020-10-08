@@ -1,10 +1,12 @@
 <main>
   <h1>Création de Quizz</h1>
-  <form>
+  <form [formGroup]="f">
     <label>
       <div>Nom du quizz</div>
-      <input type="text" appAutofocus />
+      <input type="text" appAutofocus formControlName="name" />
     </label>
-    <button class="primary" type="button" routerLink="setup">Suivant</button>
+    <button [disabled]="f.invalid" class="primary" type="button" routerLink="setup">Suivant</button>
   </form>
 </main>
+
+<!-- {{ f.value | json }} -->
