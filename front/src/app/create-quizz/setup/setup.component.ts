@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { QuizzService } from 'src/app/quizz.service';
 
 @Component({
   selector: 'app-setup',
@@ -6,9 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./setup.component.scss'],
 })
 export class SetupComponent implements OnInit {
-  name = `Les capitale d'Europe`;
-
-  constructor() {}
+  constructor(public quizz: QuizzService) {}
 
   ngOnInit(): void {}
 }
