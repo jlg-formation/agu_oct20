@@ -1,4 +1,4 @@
-<main *ngIf="quizz.current">
+<main *ngIf="quizz.current && quizz.current.questions.length > 0">
   <h1>Quizz : {{ quizz.current.name }}</h1>
   <h2>Question {{ nbr }}</h2>
   <p>{{ quizz.current.questions[nbr - 1].text }}</p>
