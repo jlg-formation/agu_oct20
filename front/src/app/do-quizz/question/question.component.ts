@@ -13,7 +13,7 @@ export class QuestionComponent implements OnInit {
     correctAnswer: new FormControl('', Validators.required),
   });
 
-  nbr = 0;
+  nbr = 1;
 
   constructor(
     public quizz: QuizzService,
