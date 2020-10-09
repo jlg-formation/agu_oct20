@@ -49,4 +49,17 @@ describe('QuestionComponent', () => {
     component.submit();
     expect(component).toBeTruthy();
   });
+
+  it('should call submit with 2 questions', () => {
+    component.f.setValue({ correctAnswer: 'C' });
+    service.current = {
+      name: 'toto',
+      questions: [
+        { text: 'qqq', answers: ['', '', '', ''], correctAnswer: 'C' },
+        { text: 'qqq', answers: ['', '', '', ''], correctAnswer: 'C' },
+      ],
+    } as Quizz;
+    component.submit();
+    expect(component).toBeTruthy();
+  });
 });
