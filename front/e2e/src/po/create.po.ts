@@ -1,11 +1,14 @@
 import { browser, by, element } from 'protractor';
 
 export class CreatePage {
-  submit() {
-    throw new Error('Method not implemented.');
+  async submit(): Promise<void> {
+    await browser.sleep(1000);
+    await element(by.css('button')).click();
   }
-  input(arg0: string) {
-    throw new Error('Method not implemented.');
+  async input(name: string): Promise<void> {
+    await browser.sleep(1000);
+    const input = element(by.css('input'));
+    await input.clear();
+    await input.sendKeys(name);
   }
- 
 }

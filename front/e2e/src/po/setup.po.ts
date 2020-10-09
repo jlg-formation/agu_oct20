@@ -1,11 +1,15 @@
 import { browser, by, element } from 'protractor';
 
 export class SetupPage {
-  clickOnFinishBtn() {
-    throw new Error('Method not implemented.');
+  async clickOnFinishBtn(): Promise<void> {
+    await browser.sleep(1000);
+    await element(by.cssContainingText('button', 'Terminer')).click();
+    await browser.sleep(1000);
   }
-  clickOnAddQuestionBtn() {
-    throw new Error('Method not implemented.');
+  async clickOnAddQuestionBtn(): Promise<void> {
+    await browser.sleep(1000);
+    await element(by.cssContainingText('button', 'Ajouter')).click();
+    await browser.sleep(1000);
+
   }
-  
 }

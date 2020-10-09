@@ -1,8 +1,9 @@
 import { browser, by, element } from 'protractor';
 
 export class FinishedPage {
-  clickHomeBtn() {
-    throw new Error('Method not implemented.');
+  async clickHomeBtn(): Promise<void> {
+    await browser.sleep(1000);
+
+    await element(by.css('button')).click();
   }
-  
 }
