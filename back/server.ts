@@ -26,6 +26,7 @@ app.get("/ws/quizz", (req, res) => {
 app.post("/ws/quizz", (req, res) => {
   const q: Quizz = req.body;
   console.log('q: ', q);
+  map[q.name] = q;
   res.status(204).end();
 });
 
