@@ -21,11 +21,12 @@ export class QuestionComponent implements OnInit {
     private router: Router
   ) {
     this.route.params.subscribe((data) => {
-      this.nbr = +data.nbr;
-      if (isNaN(this.nbr)) {
+      const nbr = +data.nbr;
+      if (isNaN(nbr)) {
         this.router.navigateByUrl('/');
         return;
       }
+      this.nbr = nbr;
     });
   }
 
