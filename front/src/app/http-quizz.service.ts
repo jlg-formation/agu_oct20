@@ -4,7 +4,7 @@ import { QuizzService } from './quizz.service';
 import { QuizzMap } from './interfaces/quizz-map';
 import { Quizz } from './interfaces/quizz';
 
-const url = 'http://localhost:3000/ws/quizz';
+const url = '/ws/quizz';
 
 @Injectable({
   providedIn: 'root',

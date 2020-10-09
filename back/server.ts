@@ -1,6 +1,6 @@
 import express from "express";
 import serveIndex from "serve-index";
-import cors from "cors";
+// import cors from "cors";
 import { QuizzMap } from "../front/src/app/interfaces/quizz-map";
 import { Quizz } from "../front/src/app/interfaces/quizz";
 
@@ -15,7 +15,7 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use(cors());
+// app.use(cors());
 
 app.use(express.json());
 
