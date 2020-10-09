@@ -1,4 +1,4 @@
-<main>
+<main *ngIf="quizz.current">
   <h1>Quizz: {{ quizz.current.name }}</h1>
   <p>Nombre de questions : {{ quizz.current.questions.length }}</p>
   <button appAutofocus class="primary" routerLink="../add-question">
